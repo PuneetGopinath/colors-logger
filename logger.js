@@ -6,7 +6,7 @@ module.exports = class Logger {
         this.recordTime = recordTime;
     }
 
-    static log (content, type = "log") {
+    static log(content, type = "log") {
         let date;
         let color;
         let text = content;
@@ -25,14 +25,14 @@ module.exports = class Logger {
                 color = green;
                 break;
             default:
-                throw new TypeError("Logger type must be either log, warn, error or debug.");
+                throw new TypeError(
+                    "Logger type must be either log, warn, error or debug."
+                );
                 return;
                 break;
         }
         let text = `${color(type.toUpperCase())} ${content}`;
-        if (this.recordTime)
-            console.log(`${date}: ${text}`);
-        else
-            console.log(`${text}`);
+        if (this.recordTime) console.log(`${date}: ${text}`);
+        else console.log(`${text}`);
     }
 };
