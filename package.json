@@ -1,0 +1,28 @@
+{
+  "name": "colors-logger",
+  "version": "0.1.0",
+  "description": "Log your information and errors colorfully",
+  "main": "logger.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PuneetGopinath/colors-logger.git"
+  },
+  "keywords": [
+    "logger",
+    "colors",
+    "chalk"
+  ],
+  "author": "PuneetGopinath",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PuneetGopinath/colors-logger/issues"
+  },
+  "homepage": "https://github.com/PuneetGopinath/colors-logger#readme",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "moment": "^2.29.1"
+  }
+}
