@@ -1,4 +1,4 @@
-const { bgBlue, black, green } = require("chalk");
+const { bgBlue, black, green, blue } = require("chalk");
 const moment = require("moment");
 
 module.exports = class Logger {
