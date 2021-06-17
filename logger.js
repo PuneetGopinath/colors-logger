@@ -2,7 +2,7 @@ const { bgBlue, black, green } = require("chalk");
 const moment = require("moment");
 
 module.exports = class Logger {
-    constructor(recordTime=true) {
+    constructor(recordTime = true) {
         this.recordTime = recordTime;
     }
 

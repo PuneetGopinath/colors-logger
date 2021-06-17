@@ -4,7 +4,9 @@
   "description": "Log your information and errors colorfully",
   "main": "logger.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "format:check": "prettier --check .",
+    "format": "prettier --write ."
   },
   "repository": {
     "type": "git",
