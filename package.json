@@ -1,10 +1,12 @@
 {
   "name": "colors-logger",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Log your information and errors colorfully",
   "main": "logger.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "format:check": "prettier --check .",
+    "format": "prettier --write ."
   },
   "repository": {
     "type": "git",
