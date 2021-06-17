@@ -10,7 +10,7 @@ module.exports = class Logger {
         let date;
         let color;
         date = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
-        switch (type) {
+        switch (type.toLowerCase()) {
             case "log":
                 color = bgBlue;
                 break;
@@ -20,6 +20,7 @@ module.exports = class Logger {
             case "warn":
                 color = black.bgYellow;
                 break;
+            case "err":
             case "error":
                 color = black.bgRed;
                 break;
