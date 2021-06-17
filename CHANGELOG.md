@@ -17,6 +17,7 @@ Note that the displayed date is in the format `dd-mm-yyyy`
 ### Changes
 
 - Shorter code
+- The log function is no longer `static`
 
 ## [v0.1.1]
 

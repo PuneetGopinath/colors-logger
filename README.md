@@ -24,7 +24,7 @@ logger.log("You message here", "log");
 
 The type parameter is the second parameter.
 
-- `log` - Blue background
+- `log` or `info` - Blue background
 - `notice` - Blue
 - `warn` - Black with Yellow background
 - `error` or `err` - Black with Red background
