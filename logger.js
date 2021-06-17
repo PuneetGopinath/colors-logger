@@ -1,4 +1,4 @@
-const { bgBlue, black, green, blue, red } = require("chalk");
+const { bgBlue, black, green, blue, red, yellow } = require("chalk");
 const moment = require("moment");
 
 module.exports = class Logger {
@@ -19,7 +19,7 @@ module.exports = class Logger {
                 color = blue;
                 break;
             case "warn":
-                color = black.bgYellow;
+                color = yellow;
                 break;
             case "err":
             case "error":
