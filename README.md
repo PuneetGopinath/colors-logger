@@ -9,7 +9,8 @@ Run `npm i colors-logger`
 ## Example usage
 
 ```
-const logger = require("colors-logger");
+const Logger = require("colors-logger");
+const logger = new Logger();
 logger.log("You message here", "log");
 ```
 

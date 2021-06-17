@@ -6,6 +6,14 @@ Note that the displayed date is in the format `dd-mm-yyyy`
 
 [Older changelogs](#older-changelogs)
 
+## [Unreleased]
+
+> **Released:** `TBA`
+
+### Changes
+
+- Shorter code
+
 ## [v0.1.1]
 
 > **Released:** `17-06-2021`

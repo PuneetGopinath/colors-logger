@@ -2,24 +2,37 @@ const { bgBlue, black, green } = require("chalk");
 const moment = require("moment");
 
 module.exports = class Logger {
+    constructor(recordTime=true) {
+        this.recordTime = recordTime;
+    }
+
     static log (content, type = "log") {
-        const date = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
+        let date;
+        let color;
+        let text = content;
+        date = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
         switch (type) {
             case "log":
-                return console.log(`${date} ${bgBlue(type.toUpperCase())} ${content} `);
+                color = bgBlue;
                 break;
             case "warn":
-                return console.log(`${date} ${black.bgYellow(type.toUpperCase())} ${content} `);
+                color = black.bgYellow;
                 break;
             case "error":
-                return console.log(`${date} ${black.bgRed(type.toUpperCase())} ${content} `);
+                color = black.bgRed;
                 break;
             case "debug":
-                return console.log(`${date} ${green(type.toUpperCase())} ${content} `);
+                color = green;
                 break;
             default:
                 throw new TypeError("Logger type must be either log, warn, error or debug.");
+                return;
                 break;
         }
+        let text = `${color(type.toUpperCase())} ${content}`;
+        if (this.recordTime)
+            console.log(`${date}: ${text}`);
+        else
+            console.log(`${text}`);
     }
 };
