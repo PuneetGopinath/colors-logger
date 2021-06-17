@@ -1,4 +1,5 @@
-const logger = require("./logger");
+const Logger = require("./logger");
+const logger = new Logger();
 
 logger.log("Testing");
 logger.log("This is a warning message", "warn");

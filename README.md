@@ -2,6 +2,10 @@
 
 > Log your information and errors colorfully
 
+## Screenshot
+
+![example image](screenshot.jpg)
+
 ## Installation
 
 Run `npm i colors-logger`
@@ -18,7 +22,8 @@ logger.log("You message here", "log");
 
 ### What types are available to use in type parameter?
 
-- log
-- warn
-- error
-- debug
+- log - Blue background
+- notice - Blue
+- warn - Black with Yellow background
+- error - Black with Red background
+- debug - Green

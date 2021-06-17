@@ -6,9 +6,13 @@ Note that the displayed date is in the format `dd-mm-yyyy`
 
 [Older changelogs](#older-changelogs)
 
-## [Unreleased]
+## [v0.2.0]
 
 > **Released:** `TBA`
+
+### New types
+
+- `notice` Notice message
 
 ### Changes
 
