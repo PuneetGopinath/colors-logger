@@ -6,7 +6,7 @@ module.exports = class Logger {
         this.recordTime = recordTime;
     }
 
-    static log(content, type = "log") {
+    log(content, type = "log") {
         let date;
         let color;
         date = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
