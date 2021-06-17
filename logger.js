@@ -19,7 +19,7 @@ module.exports = class Logger {
                 color = blue;
                 break;
             case "warn":
-                color = black.bgYellow;
+                color = yellow;
                 break;
             case "err":
             case "error":

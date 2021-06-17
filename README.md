@@ -26,6 +26,6 @@ The type parameter is the second parameter.
 
 - `log` or `info` - Blue background
 - `notice` - Blue
-- `warn` - Black with Yellow background
-- `error` or `err` - Black with Red background
+- `warn` - Yellow
+- `error` or `err` - Red
 - `debug` - Green
