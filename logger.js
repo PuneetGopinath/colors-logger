@@ -9,11 +9,13 @@ module.exports = class Logger {
     static log (content, type = "log") {
         let date;
         let color;
-        let text = content;
         date = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
         switch (type) {
             case "log":
                 color = bgBlue;
+                break;
+            case "notice":
+                color = blue;
                 break;
             case "warn":
                 color = black.bgYellow;
