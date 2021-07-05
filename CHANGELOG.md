@@ -6,9 +6,21 @@ Note that the displayed date is in the format `dd-mm-yyyy`
 
 [Older changelogs](#older-changelogs)
 
-## [v0.2.0]
+## [v0.3.0]
 
 > **Released:** `TBA`
+
+### New features
+
+- You can pass a array of strings called tags in the 3rd argument, so you can categorise logs.
+
+### Changes
+
+- Added a `version` property to the class.
+
+## [v0.2.0]
+
+> **Released:** `17-06-2021`
 
 ### New types
 
@@ -34,6 +46,8 @@ Note that the displayed date is in the format `dd-mm-yyyy`
 ### Initial development release
 
 <!-- Links -->
+[v0.3.0]: https://github.com/PuneetGopinath/colors-logger/releases/tag/v0.3.0
+[v0.2.0]: https://github.com/PuneetGopinath/colors-logger/releases/tag/v0.2.0
 [v0.1.0]: https://github.com/PuneetGopinath/colors-logger/releases/tag/v0.1.0
 
 ## Older changelogs

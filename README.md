@@ -2,10 +2,6 @@
 
 > Log your information and errors colorfully
 
-## Screenshot
-
-![example image](screenshot.jpg)
-
 ## Installation
 
 Run `npm i colors-logger`
@@ -15,7 +11,7 @@ Run `npm i colors-logger`
 ```
 const Logger = require("colors-logger");
 const logger = new Logger();
-logger.log("You message here", "log");
+logger.log("You message here", "log", ["INFO"]);
 ```
 
 ## FAQ
@@ -29,3 +25,11 @@ The type parameter is the second parameter.
 - `warn` - Yellow
 - `error` or `err` - Red
 - `debug` - Green
+
+### What args are required here?
+
+Only the 1st argument or `content` argument is required.
+
+If the 2nd argument or `type` argument is omitted, then it will be considered as log.
+
+The 3rd argument or `tags` argument, if say, wjich category this log belongs to.

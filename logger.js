@@ -4,9 +4,13 @@ const moment = require("moment");
 module.exports = class Logger {
     constructor(recordTime = true) {
         this.recordTime = recordTime;
+        this.version = require("./package.json").version;
     }
 
-    log(content, type = "log") {
+    log(content, type = "log", tags = ["INFO"]) {
+        if (typeof tags !== "array") {
+            throw new TypeError("Argument tags should be typeof array, received " + typeof tags);
+        }
         let date;
         let color;
         date = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
@@ -36,6 +40,8 @@ module.exports = class Logger {
                 break;
         }
         let text = `${color(type.toUpperCase())} ${content}`;
+        if (tags)
+            text = `[${tags.join(", ")}]` + text;
         if (this.recordTime) console.log(`${date}: ${text}`);
         else console.log(`${text}`);
     }
