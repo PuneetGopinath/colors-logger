@@ -40,8 +40,12 @@ module.exports = class Logger {
                 break;
         }
         let text = `${color(type.toUpperCase())} ${content}`;
+<<<<<<< HEAD
         if (tags)
             text = `[${tags.join(", ")}] ` + text;
+=======
+        if (tags) text = `[${tags.join(", ")}]` + text;
+>>>>>>> f2b69d39e8811d75e6da70faa9d6753a51e41116
         if (this.recordTime) console.log(`${date}: ${text}`);
         else console.log(`${text}`);
     }
