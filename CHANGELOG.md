@@ -6,9 +6,17 @@ Note that the displayed date is in the format `dd-mm-yyyy`
 
 [Older changelogs](#older-changelogs)
 
-## [v0.3.0]
+## [v0.3.1]
 
 > **Released:** `TBA`
+
+### Bug fixes
+
+- Fix bug even when the tags arg is array, it throws error.
+
+## [v0.3.0]
+
+> **Released:** `05-07-2021`
 
 ### New features
 
