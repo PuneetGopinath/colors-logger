@@ -6,6 +6,8 @@
 
 Run `npm i colors-logger`
 
+Note: Currently this is used in nodejs only.
+
 ## Example usage
 
 ```
@@ -13,6 +15,11 @@ const Logger = require("colors-logger");
 const logger = new Logger();
 logger.log("You message here", "log", ["INFO"]);
 ```
+
+## Useful links
+
+- [GitHub](https://github.com/PuneetGopinath/colors-logger)
+- [Docs](https://puneetgopinath.github.io/colors-logger/Logger.html)
 
 ## FAQ
 
@@ -25,11 +32,3 @@ The type parameter is the second parameter.
 - `warn` - Yellow
 - `error` or `err` - Red
 - `debug` - Green
-
-### What args are required here?
-
-Only the 1st argument or `content` argument is required.
-
-If the 2nd argument or `type` argument is omitted, then it will be considered as log.
-
-The 3rd argument or `tags` argument, tags of that log.
