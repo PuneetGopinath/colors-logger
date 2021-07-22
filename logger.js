@@ -1,7 +1,6 @@
 /**
- * Colors Logger
+ * Colors Logger - https://github.com/PuneetGopinath/colors-logger
  * @author PuneetGopinath
- * @link https://github.com/PuneetGopinath/colors-logger
  */
 const { bgBlue, black, green, blue, red, yellow, gray } = require("chalk");
 const moment = require("moment");
