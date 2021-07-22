@@ -6,17 +6,20 @@
 const { bgBlue, black, green, blue, red, yellow, gray } = require("chalk");
 const moment = require("moment");
 
+/**
+ * Logger class
+ */
 class Logger {
     /**
      * Create new Logger
      * @param {object} options The options
-     * @param {boolen} options.recordTime Whether to log time with the log.
+     * @param {boolen} options.recordDate Whether to log date with the log.
      * @constructor
      * @return Logger
      */
     constructor(options = {}) {
-        const { recordTime = true } = options;
-        this.recordTime = recordTime;
+        const { recordDate = true } = options;
+        this.opts = { recordDate };
         this.version = require(__dirname + "/package.json").version;
     }
 
@@ -66,7 +69,7 @@ class Logger {
         }
         let text = `${color(type.toUpperCase())} ${content}`;
         if (tags) text = `[${tags.join(", ")}] ` + text;
-        if (this.recordTime) text = `${gray(date)}: ${text}`;
+        if (this.opts.recordDate) text = `${gray(date)}: ${text}`;
         console.log(`${text}`);
         return text;
     }
