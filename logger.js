@@ -25,7 +25,9 @@ module.exports = class Logger {
             tags = [tags];
         }
         if (!Array.isArray(tags)) {
-            throw new TypeError(`Argument \"tags\" should be typeof array, received ${typeof tags}`);
+            throw new TypeError(
+                `Argument \"tags\" should be typeof array, received ${typeof tags}`
+            );
         }
         let date;
         let color;
@@ -56,8 +58,7 @@ module.exports = class Logger {
                 break;
         }
         let text = `${color(type.toUpperCase())} ${content}`;
-        if (tags)
-            text = `[${tags.join(", ")}] ` + text;
+        if (tags) text = `[${tags.join(", ")}] ` + text;
         if (this.recordTime) console.log(`${gray(date)}: ${text}`);
         else console.log(`${text}`);
         return text;
