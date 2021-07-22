@@ -67,6 +67,6 @@ class Logger {
         else console.log(`${text}`);
         return text;
     }
-};
+}
 
 module.exports = Logger;
