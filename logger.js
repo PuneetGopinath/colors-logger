@@ -11,7 +11,7 @@ module.exports = class Logger {
     constructor(options = {}) {
         const { recordTime = true } = options;
         this.recordTime = recordTime;
-        this.version = require(__diraname + "/package.json").version;
+        this.version = require(__dirname + "/package.json").version;
     }
 
     /**
