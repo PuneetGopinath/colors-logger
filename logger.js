@@ -1,14 +1,30 @@
-const { bgBlue, black, green, blue, red, yellow } = require("chalk");
+const { bgBlue, black, green, blue, red, yellow, gray } = require("chalk");
 const moment = require("moment");
 
 module.exports = class Logger {
-    constructor(recordTime = true) {
+    /**
+     * Create new Logger
+     * @param {object} options
+     * @constructor
+     * @return Logger
+     */
+    constructor(options = {}) {
+        const { recordTime = true } = options;
         this.recordTime = recordTime;
-        this.version = require("./package.json").version;
+        this.version = require(__diraname + "/package.json").version;
     }
 
-    log(content, type = "log", tags = ["INFO"]) {
-        if (!typeof tags === "array") {
+    /**
+     * Log text
+     * @param {string} content The content
+     * @param {string} type The type
+     * @param {array} tags The tags
+     */
+    log(content, type = "log", tags = ["LOGGER"]) {
+        if (typeof tags === "string") {
+            tags = [tags];
+        }
+        if (!Array.isArray(tags)) {
             throw new TypeError(`Argument \"tags\" should be typeof array, received ${typeof tags}`);
         }
         let date;
@@ -42,7 +58,8 @@ module.exports = class Logger {
         let text = `${color(type.toUpperCase())} ${content}`;
         if (tags)
             text = `[${tags.join(", ")}] ` + text;
-        if (this.recordTime) console.log(`${date}: ${text}`);
+        if (this.recordTime) console.log(`${gray(date)}: ${text}`);
         else console.log(`${text}`);
+        return text;
     }
 };
