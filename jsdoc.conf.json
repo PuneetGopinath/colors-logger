@@ -8,11 +8,16 @@
   },
   "sourceType": "module",
   "tags": {
-    "allowUnknownTags": true,
+    "allowUnknownTags": false,
     "dictionaries": ["jsdoc", "closure"]
+  },
+  "opts": {
+    "encoding": "utf8",
+    "destination": "./docs/",
+    "readme": "./README.md"
   },
   "templates": {
     "cleverLinks": false,
-    "monospaceLinks": false
+    "monospaceLinks": true
   }
 }
