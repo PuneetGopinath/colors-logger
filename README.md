@@ -32,4 +32,4 @@ Only the 1st argument or `content` argument is required.
 
 If the 2nd argument or `type` argument is omitted, then it will be considered as log.
 
-The 3rd argument or `tags` argument, if say, wjich category this log belongs to.
+The 3rd argument or `tags` argument, tags of that log.

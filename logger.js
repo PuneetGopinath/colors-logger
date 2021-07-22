@@ -1,7 +1,11 @@
+/**
+ * Colors Logger
+ * @author PuneetGopinath
+ */
 const { bgBlue, black, green, blue, red, yellow, gray } = require("chalk");
 const moment = require("moment");
 
-module.exports = class Logger {
+class Logger {
     /**
      * Create new Logger
      * @param {object} options
@@ -17,8 +21,8 @@ module.exports = class Logger {
     /**
      * Log text
      * @param {string} content The content
-     * @param {string} type The type
-     * @param {array} tags The tags
+     * @param {string} type The type of that log
+     * @param {array} tags The tags of that log.
      */
     log(content, type = "log", tags = ["LOGGER"]) {
         if (typeof tags === "string") {
@@ -64,3 +68,5 @@ module.exports = class Logger {
         return text;
     }
 };
+
+module.exports = Logger;
