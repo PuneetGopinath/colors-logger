@@ -4,7 +4,7 @@
 
 ## Installation
 
-Run `npm i colors-logger`
+Run `npm install colors-logger --save`
 
 Note: Currently this is used in nodejs only.
 
@@ -18,17 +18,7 @@ logger.log("You message here", "log", ["INFO"]);
 
 ## Useful links
 
+- [NPM](https://npmjs.com/package/colors-logger)
 - [GitHub](https://github.com/PuneetGopinath/colors-logger)
 - [Docs](https://puneetgopinath.github.io/colors-logger/Logger.html)
 
-## FAQ
-
-### What types are available to use in type parameter?
-
-The type parameter is the second parameter.
-
-- `log` or `info` - Blue background
-- `notice` - Blue
-- `warn` - Yellow
-- `error` or `err` - Red
-- `debug` - Green
