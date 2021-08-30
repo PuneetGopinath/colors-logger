@@ -1,13 +1,13 @@
 {
   "name": "colors-logger",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Log your information and errors colorfully",
   "main": "logger.js",
   "scripts": {
     "test": "node test.js",
     "format:check": "prettier --check .",
     "format": "prettier --write .",
-    "jsdoc": "jsdoc logger.js -c jsdoc.conf.json"
+    "jsdoc": "npx jsdoc logger.js -c jsdoc.conf.json"
   },
   "repository": {
     "type": "git",

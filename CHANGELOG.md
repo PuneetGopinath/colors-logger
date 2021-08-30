@@ -6,9 +6,17 @@ Note that the displayed date is in the format `dd-mm-yyyy`
 
 [Older changelogs](#older-changelogs)
 
-## [v0.3.1]
+## [v0.4.0]
 
 > **Released:** `TBA`
+
+### New features
+
+- Add shortcut methods: `info`, `notice`, `warn`, `error`, `debug`
+
+## [v0.3.1]
+
+> **Released:** `05-07-2021`
 
 ### Bug fixes
 

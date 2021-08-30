@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>JSDoc: Source: logger.js</title>
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: logger.js</title>
 
-        <script src="scripts/prettify/prettify.js"></script>
-        <script src="scripts/prettify/lang-css.js"></script>
-        <!--[if lt IE 9]>
-            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-        <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css" />
-        <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css" />
-    </head>
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
 
-    <body>
-        <div id="main">
-            <h1 class="page-title">Source: logger.js</h1>
+<body>
 
-            <section>
-                <article>
-                    <pre class="prettyprint source linenums"><code>/**
+<div id="main">
+
+    <h1 class="page-title">Source: logger.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
  * Colors Logger
  * @author PuneetGopinath
+ * {@link https://github.com/PuneetGopinath/colors-logger|GitHub}
  */
 const { bgBlue, black, green, blue, red, yellow, gray } = require("chalk");
 const moment = require("moment");
@@ -29,7 +37,8 @@ const moment = require("moment");
 class Logger {
     /**
      * Create new Logger
-     * @param {object} options
+     * @param {object} options The options
+     * @param {boolen} options.recordTime Whether to log time with the log.
      * @constructor
      * @return Logger
      */
@@ -44,6 +53,7 @@ class Logger {
      * @param {string} content The content
      * @param {string} type The type of that log
      * @param {array} tags The tags of that log.
+     * @return {string} text The text that was logged
      */
     log(content, type = "log", tags = ["LOGGER"]) {
         if (typeof tags === "string") {
@@ -77,43 +87,93 @@ class Logger {
                 break;
             default:
                 throw new TypeError(
-                    "Logger type must be either log, warn, error or debug."
+                    "Logger type must be either log, info, warn, error or debug."
                 );
                 return;
                 break;
         }
         let text = `${color(type.toUpperCase())} ${content}`;
         if (tags) text = `[${tags.join(", ")}] ` + text;
-        if (this.recordTime) console.log(`${gray(date)}: ${text}`);
-        else console.log(`${text}`);
+        if (this.recordTime) text = `${gray(date)}: ${text}`;
+        console.log(`${text}`);
         return text;
+    }
+
+    /**
+     * Shortcut for log(content, "info", tags)
+     * @param {string} content The content
+     * @param {array} tags The tags of that log.
+     * @return {string} text The text that was logged
+     */
+    info(content, tags) {
+        return this.log(content, "info", tags);
+    }
+
+    /**
+     * Shortcut for log(content, "notice", tags)
+     * @param {string} content The content
+     * @param {array} tags The tags of that log.
+     * @return {string} text The text that was logged
+     */
+    notice(content, tags) {
+        return this.log(content, "notice", tags);
+    }
+
+    /**
+     * Shortcut for log(content, "warn", tags)
+     * @param {string} content The content
+     * @param {array} tags The tags of that log.
+     * @return {string} text The text that was logged
+     */
+    warn(content, tags) {
+        return this.log(content, "warn", tags);
+    }
+
+    /**
+     * Shortcut for log(content, "error", tags)
+     * @param {string} content The content
+     * @param {array} tags The tags of that log.
+     * @return {string} text The text that was logged
+     */
+    error(content, tags) {
+        return this.log(content, "error", tags);
+    }
+
+    /**
+     * Shortcut for log(content, "debug", tags)
+     * @param {string} content The content
+     * @param {array} tags The tags of that log.
+     * @return {string} text The text that was logged
+     */
+    debug(content, tags) {
+        return this.log(content, "debug", tags);
     }
 }
 
+/**
+ * @ignore
+ */
 module.exports = Logger;
 </code></pre>
-                </article>
-            </section>
-        </div>
+        </article>
+    </section>
 
-        <nav>
-            <h2><a href="index.html">Home</a></h2>
-            <h3>Classes</h3>
-            <ul>
-                <li><a href="Logger.html">Logger</a></li>
-            </ul>
-        </nav>
 
-        <br class="clear" />
 
-        <footer>
-            Documentation generated by
-            <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Thu Jul 22 2021 09:54:54 GMT+0530 (India Standard Time)
-        </footer>
 
-        <script>
-            prettyPrint();
-        </script>
-        <script src="scripts/linenumber.js"></script>
-    </body>
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Logger.html">Logger</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Mon Aug 30 2021 20:38:20 GMT+0530 (India Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
 </html>

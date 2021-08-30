@@ -1,7 +1,7 @@
 /**
  * Colors Logger
  * @author PuneetGopinath
- * @link https://github.com/PuneetGopinath/colors-logger
+ * {@link https://github.com/PuneetGopinath/colors-logger|GitHub}
  */
 const { bgBlue, black, green, blue, red, yellow, gray } = require("chalk");
 const moment = require("moment");
@@ -70,6 +70,59 @@ class Logger {
         console.log(`${text}`);
         return text;
     }
+
+    /**
+     * Shortcut for log(content, "info", tags)
+     * @param {string} content The content
+     * @param {array} tags The tags of that log.
+     * @return {string} text The text that was logged
+     */
+    info(content, tags) {
+        return this.log(content, "info", tags);
+    }
+
+    /**
+     * Shortcut for log(content, "notice", tags)
+     * @param {string} content The content
+     * @param {array} tags The tags of that log.
+     * @return {string} text The text that was logged
+     */
+    notice(content, tags) {
+        return this.log(content, "notice", tags);
+    }
+
+    /**
+     * Shortcut for log(content, "warn", tags)
+     * @param {string} content The content
+     * @param {array} tags The tags of that log.
+     * @return {string} text The text that was logged
+     */
+    warn(content, tags) {
+        return this.log(content, "warn", tags);
+    }
+
+    /**
+     * Shortcut for log(content, "error", tags)
+     * @param {string} content The content
+     * @param {array} tags The tags of that log.
+     * @return {string} text The text that was logged
+     */
+    error(content, tags) {
+        return this.log(content, "error", tags);
+    }
+
+    /**
+     * Shortcut for log(content, "debug", tags)
+     * @param {string} content The content
+     * @param {array} tags The tags of that log.
+     * @return {string} text The text that was logged
+     */
+    debug(content, tags) {
+        return this.log(content, "debug", tags);
+    }
 }
 
+/**
+ * @ignore
+ */
 module.exports = Logger;
