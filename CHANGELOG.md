@@ -62,6 +62,8 @@ Note that the displayed date is in the format `dd-mm-yyyy`
 ### Initial development release
 
 <!-- Links -->
+[v0.4.0]: https://github.com/PuneetGopinath/colors-logger/releases/tag/v0.4.0
+[v0.3.1]: https://github.com/PuneetGopinath/colors-logger/releases/tag/v0.3.1
 [v0.3.0]: https://github.com/PuneetGopinath/colors-logger/releases/tag/v0.3.0
 [v0.2.0]: https://github.com/PuneetGopinath/colors-logger/releases/tag/v0.2.0
 [v0.1.0]: https://github.com/PuneetGopinath/colors-logger/releases/tag/v0.1.0
